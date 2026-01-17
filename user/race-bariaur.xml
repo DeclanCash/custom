@@ -9,9 +9,10 @@
         </update>
     </info>
 
-  <element name="Bariaur" type="Race" source="Planescape Campaign Setting" id="ID_RACE_BARIAUR">
+  <element name="Bariaur" type="Race" source="Planescape Campaign Setting" id="ID_PLANAR_RACE_BARIAUR">
+    <prerequisite>Planescape Campaign</prerequisite>
 		<description>
-			<p class="flavor">Bariaurs are a centaur-like race hailing from the plane of Ysgard, being half-man with the lower bodies of goats and curved horns. Innate to the bariaur people is their insatiable wanderlust, roving about Ysgard's earthbergs in itinerant flocks numbering up to 80 persons in search of feed and fights; some flocks choose instead to roam the Outlands, eagerly assisting like-minded planar travelers. It is this wanderlust that impels many to undertake adventuring in the hopes of finding thrill and glory, though many equally desire to vanquish evil throughout the planes.</p>
+			<p>Bariaurs are a centaur-like race hailing from the plane of Ysgard, being half-man with the lower bodies of goats and curved horns. Innate to the bariaur people is their insatiable wanderlust, roving about Ysgard's earthbergs in itinerant flocks numbering up to 80 persons in search of feed and fights; some flocks choose instead to roam the Outlands, eagerly assisting like-minded planar travelers. It is this wanderlust that impels many to undertake adventuring in the hopes of finding thrill and glory, though many equally desire to vanquish evil throughout the planes.</p>
 			<p>Across the multiverse, bariaurs maintain a reputation as blithe yet obstinate warriors for whom freedom is paramount, reproaching those who seek to lord over them or others. As such, a bariaur's trust is not readily earned, and those foolish enough to draw one's ire quickly learn them to be fierce combatants. Their curling horns are powerful weapons, oftentimes ornamented with expensive jewelry for which many bariaur have acquired a taste. In a similar spirit of decoration, it is not uncommon to see a bariaur whose fur is painted with intricate and colorful designs; despite their nature as fighters, bariaurs love finery, complementary to their mirthful dispositions.</p>
 			<h4>BARIAUR TRAITS</h4>
 			<p>Bariaur player characters gain the following traits.</p>
@@ -27,7 +28,7 @@
 			<p class="indent"><strong><em>Mighty Leap.</em></strong> As a bonus action, you can jump up to a number of feet equal to your movement speed. This distance costs movement as normal.</p>
 			<p class="indent"><strong><em>Ram.</em></strong> You can use your head and horns to make unarmed strikes. When you hit with them, the strike deals 1d6 + your Strength modifier bludgeoning damage, instead of the bludgeoning damage normal for an unarmed strike.</p>
 		</description>
-	
+	  <sheet display="false" />
 		<rules>
 		  <stat name="strength" value="1" />
 			<stat name="constitution" value="1"  />
@@ -37,29 +38,35 @@
 			<grant type="Vision" id="ID_VISION_DARKVISION" />
 			<grant type="Language" id="ID_LANGUAGE_COMMON" />
 			<grant type="Language" id="ID_LANGUAGE_CELESTIAL" />
+			<grant type="Racial Trait" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_CELESTIAL" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_BARIAUR_CAPRINE_BUILD" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_BARIAUR_MIGHTY_LEAP" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_BARIAUR_RAM" />
-		</rules>
+		</rules>		
 	</element>
 	
-	 <element name="Caprine Build" type="Racial Trait" source="Homebrew" id="ID_WIKI_RACIAL_TRAIT_BARIAUR_CAPRINE_BUILD">
+	  <element name="Caprine Build" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_BARIAUR_CAPRINE_BUILD">
         <description>
-            <p>You count as one size larger when determining your carrying capacity and the weight you can push or drag.<br/>In addition, when making a climb that requires your hands and feet, each foot of movement costs you 4 extra feet, instead of the normal 1 extra foot.</p>
+            <p>You count as one size larger when determining your carrying capacity and the weight you can push or drag.<br/> In addition, when making a climb that requires your hands and feet, each foot of movement costs you 4 extra feet, instead of the normal 1 extra foot.</p>
         </description>
         <sheet>
-            <description>You count as one size larger when determining your carrying capacity and the weight you can push or drag.<br/>In addition, when making a climb that requires your hands and feet, each foot of movement costs you 4 extra feet, instead of the normal 1 extra foot.</description>
+            <description>You count as one size larger when determining your carrying capacity and the weight you can push or drag.<br/> In addition, when making a climb that requires your hands and feet, each foot of movement costs you 4 extra feet, instead of the normal 1 extra foot.</description>
         </sheet>
+        <rules>
+          <grant type="Grants" id="ID_INTERNAL_GRANTS_WEIGHT_CAPACITY_COUNTS_AS_LARGER" />
+        </rules>
     </element>
-	<element name="Mighty Leap" type="Racial Trait" source="Homebrew" id="ID_WIKI_RACIAL_TRAIT_BARIAUR_MIGHTY_LEAP">
+    
+	  <element name="Mighty Leap" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_BARIAUR_MIGHTY_LEAP">
         <description>
             <p>As a bonus action, you can jump up to a number of feet equal to your movement speed. This distance costs movement as normal.</p>
         </description>
-        <sheet>
+        <sheet action="Bonus Action">
             <description>As a bonus action, you can jump up to a number of feet equal to your movement speed. This distance costs movement as normal.</description>
         </sheet>
     </element>
-    <element name="Ram" type="Racial Trait" source="Homebrew" id="ID_WIKI_RACIAL_TRAIT_BARIAUR_RAM">
+    
+      <element name="Ram" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_BARIAUR_RAM">
         <description>
             <p>You can use your head and horns to make unarmed strikes. When you hit with them, the strike deals 1d6 + your Strength modifier bludgeoning damage, instead of the bludgeoning damage normal for an unarmed strike.</p>
         </description>
