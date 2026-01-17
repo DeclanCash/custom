@@ -5,7 +5,7 @@
         <description>Planescape Campaign Setting 5e Homebrew Race</description>
         <author url="https://mimir.net/wp-content/uploads/Planescape_Races_Bariaur_Modron_5e.pdf">mimir.net</author>
          <update version="0.0.1">
-            <file name="race-bariaur.xml" url="https://github.com/Vermillion94/aurorabuilder-homebrew/edit/master/race-fairy.xml" />
+            <file name="race-bariaur.xml" url="https://github.com/DeclanCash/custom/blob/master/user/race-bariaur.xml" />
         </update>
     </info>
 
